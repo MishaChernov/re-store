@@ -1,3 +1,3 @@
-import Hoc from './Hoc';
+import withBookstoreService from './withBookstoreService';
 
-export default Hoc;
+export default withBookstoreService;
