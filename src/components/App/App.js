@@ -1,20 +1,34 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Footer from '../Footer';
 import Header from '../Header';
 
+
 require('./app.scss');
 
-function App() {
+function App(props) {
 
   return(
     <>
       <Header />
-      <main>
-        main content
+      <main className="container">
+        {props.books.map(book => (
+          <>
+            <h2>{book.title}</h2>
+            <p>{book.author}</p>
+          </>
+        ))}
       </main>
       <Footer />
     </>
   )
 }
 
-export default App;
+const mapStateToProps = (state) => {
+
+  return {
+    books: state.books
+  }
+}
+
+export default connect(mapStateToProps)(App);

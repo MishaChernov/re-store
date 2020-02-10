@@ -1,7 +1,16 @@
 const types = require('../types');
 
 const initialStore = {
-  books: []
+  books: [
+    {
+      title: 'Book 1',
+      author: 'Author 1'
+    },
+    {
+      title: 'Book 2',
+      author: 'Author 2'
+    },
+  ]
 };
 
 const reducer = (state = initialStore, action) => {
@@ -10,10 +19,10 @@ const reducer = (state = initialStore, action) => {
     case types.BOOKS_LOADED: 
       return {
         books: action.payload
-      };
-    default: {
+      }
+
+    default: 
       return state;
-    };
   }
 };
 

@@ -8,3 +8,5 @@ function ErrorIndicator() {
     </div>
   )
 }
+
+export default ErrorIndicator;
