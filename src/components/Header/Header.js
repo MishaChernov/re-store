@@ -5,7 +5,7 @@ require('./header.scss');
 function Header() {
 
   return(
-    <header class="header">
+    <header className="header">
       Header
     </header>
   )

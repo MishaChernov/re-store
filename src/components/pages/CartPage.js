@@ -1,15 +1,10 @@
 import React from 'react';
 
+import BookList from '../BookList';
+
 function CartPage() {
   return(
-    <ul>
-      <li>
-        Book 1
-      </li>
-      <li>
-        Book 2
-      </li>
-    </ul>
+    <BookList />
   );
 }
 
